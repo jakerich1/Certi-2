@@ -37,23 +37,22 @@ const position = {
     y: 0
 }
 
-console.log("Width " + window.innerWidth)
+const screenWidth = window.innerWidth
 
 interact('.draggable').draggable({
     listeners: {
         start(event) {
-            //console.log(event.type, event.target)
             event.target.style.transition = "unset"
         },
         move(event) {
+            let rotateDeg = (position.x/screenWidth)*30;
             position.x += event.dx
             position.y += event.dy
 
-            event.target.style.transform = `translate(${position.x}px, ${position.y}px)`
+            event.target.style.transform = `translate(${position.x}px, ${position.y}px) rotate(${rotateDeg}deg)`
+            
             
 
-            console.clear()
-            console.log(position.x)
 
         },
         end(event) {
