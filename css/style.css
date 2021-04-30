@@ -51,6 +51,8 @@ body{
 .coverArea{
     width: 100%;
     border-radius: 5px;
+    -ms-touch-action: none;
+  touch-action: none;
 }
 
 .coverArea img{
