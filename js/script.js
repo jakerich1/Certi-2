@@ -1,30 +1,31 @@
+//placeholder data
 let mediaObj = [{
-        cover: "/assets/images/covers/ayshani.jpg",
-        music: "/assets/music/9oclock.mp3",
+        cover: "./assets/images/covers/ayshani.jpg",
+        music: "./assets/music/9oclock.mp3",
         artist: "Ayshani",
         track: "9 O'Clock",
         actioned: false,
         like: false
     },
     {
-        cover: "/assets/images/covers/majical.jpg",
-        music: "/assets/music/downtown.mp3",
+        cover: "./assets/images/covers/majical.jpg",
+        music: "./assets/music/downtown.mp3",
         artist: "Majical Cloudz",
         track: "Downtown",
         actioned: false,
         like: false
     },
     {
-        cover: "/assets/images/covers/theheavy.jpg",
-        music: "/assets/music/shortchange.mp3",
+        cover: "./assets/images/covers/theheavy.jpg",
+        music: "./assets/music/shortchange.mp3",
         artist: "The Heavy",
         track: "Short Change Hero",
         actioned: false,
         like: false
     },
     {
-        cover: "/assets/images/covers/unnamed.jpg",
-        music: "/assets/music/dontthinktwice.mp3",
+        cover: "./assets/images/covers/unnamed.jpg",
+        music: "./assets/music/dontthinktwice.mp3",
         artist: "Post Malone",
         track: "Don't Think Twice",
         actioned: false,
@@ -32,6 +33,34 @@ let mediaObj = [{
     }
 ]
 
+//Audio control logic
+const audio = document.getElementById("myAudio")
+const playbtn = document.querySelector('#play')
+const pausebtn = document.querySelector('#pause')
+pausebtn.style.display = "none"
+
+function playAudio() { 
+    audio.play(); 
+    playbtn.style.display = "none"
+    pausebtn.style.display = "inline-block"
+    playbtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24"viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 4v16l13 -8z"></path></svg>'
+} 
+
+function pauseAudio() { 
+    audio.pause(); 
+    pausebtn.style.display = "none"
+    playbtn.style.display = "inline-block"
+} 
+
+playbtn.addEventListener("click", playAudio)
+pausebtn.addEventListener("click", pauseAudio)
+audio.onended = function() {
+    pausebtn.style.display = "none"
+    playbtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-repeat" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 12v-3a3 3 0 0 1 3 -3h13m-3 -3l3 3l-3 3"></path><path d="M20 12v3a3 3 0 0 1 -3 3h-13m3 3l-3 -3l3 -3"></path></svg>'
+    playbtn.style.display = "inline-block"
+};
+
+//
 const position = {
     x: 0,
     y: 0
@@ -51,9 +80,6 @@ interact('.draggable').draggable({
 
             event.target.style.transform = `translate(${position.x}px, ${position.y}px) rotate(${rotateDeg}deg)`
             
-            
-
-
         },
         end(event) {
             event.target.style.transition = "all 0.3s ease-in-out"

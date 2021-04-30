@@ -52,12 +52,24 @@ body{
     width: 100%;
     border-radius: 5px;
     -ms-touch-action: none;
-  touch-action: none;
+    touch-action: none;
 }
 
 .coverArea img{
     width: 100%;
     border-radius: 5px;
+}
+
+button{
+    color: aqua;
+    background: none;
+    border: none;
+    
+}
+
+button svg{
+    height: 48px;
+    width: 48px;
 }
 
 .botNav{
