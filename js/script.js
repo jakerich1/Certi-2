@@ -39,19 +39,21 @@ const playbtn = document.querySelector('#play')
 const pausebtn = document.querySelector('#pause')
 const scrubArea = document.querySelector('.scrubArea')
 const scrubBar = document.querySelector('.scrubTop')
+const botNav = document.querySelector('.botNav')
 pausebtn.style.display = "none"
+const screenWidth = window.innerWidth
 
 function playAudio() { 
     audio.play(); 
     playbtn.style.display = "none"
-    pausebtn.style.display = "inline-block"
+    pausebtn.style.display = "block"
     playbtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24"viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 4v16l13 -8z"></path></svg>'
 } 
 
 function pauseAudio() { 
     audio.pause(); 
     pausebtn.style.display = "none"
-    playbtn.style.display = "inline-block"
+    playbtn.style.display = "block"
 } 
 
 function scrubClick(event){
@@ -80,8 +82,6 @@ const position = {
     x: 0,
     y: 0
 }
-
-const screenWidth = window.innerWidth
 
 interact('.draggable').draggable({
     listeners: {
