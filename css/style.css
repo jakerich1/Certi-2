@@ -18,10 +18,8 @@ body {
 }
 
 body {
-    position: relative;
     background-color: rgb(17, 17, 17);
     padding: 0 10px;
-    overflow-x: hidden;
 }
 
 .title {
@@ -111,8 +109,8 @@ body {
 .botNav {
     position: fixed;
     left: 0;
+    right: 0;
     bottom: 0;
-    width: 100%;
     padding: 10px 0;
     display: flex;
     justify-content: space-around;
