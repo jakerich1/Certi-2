@@ -21,6 +21,7 @@ body {
     position: relative;
     background-color: rgb(17, 17, 17);
     padding: 0 10px;
+    overflow-x: hidden;
 }
 
 .title {
