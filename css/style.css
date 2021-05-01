@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,32 +8,33 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-svg{
+svg {
     stroke: aqua;
 }
 
-html, body{
+html,
+body {
     height: 100%;
 }
 
-body{
+body {
     background-color: rgb(17, 17, 17);
     padding: 0 10px;
 }
 
-.title{
+.title {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.topNav{
+.topNav {
     display: flex;
     justify-content: space-around;
-   
+
 }
 
-.topNav .tab{
+.topNav .tab {
     display: flex;
     justify-content: center;
     flex: 1;
@@ -44,38 +46,68 @@ body{
     margin-bottom: 5px;
 }
 
-.activeNav{
+.activeNav {
     border-bottom: 2px solid aqua !important;
 }
 
-.coverArea{
+.coverArea {
+    z-index: 1;
     width: 100%;
     border-radius: 5px;
     -ms-touch-action: none;
     touch-action: none;
 }
 
-.coverArea img{
+.coverArea img {
     width: 100%;
     border-radius: 5px;
+    filter: opacity(0.1);
 }
 
-button{
+.controlArea {
+    display: flex;
+}
+
+.controlArea .buttonGroup {
+    display: flex;
+    align-items: center;
+}
+
+.controlArea .buttonGroup button {
     color: aqua;
     background: none;
     border: none;
-    
 }
 
-button svg{
+.controlArea .buttonGroup button svg {
     height: 48px;
     width: 48px;
 }
 
-.botNav{
-    position: absolute;
+.controlArea .scrubArea {
+    flex: 1;
+    margin-left: 7px;
+    padding-top: 21px;
+}
+
+.controlArea .scrubArea .scrubBase {
+    background-color: rgba(255, 255, 255, 0.192);
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+}
+
+.controlArea .scrubArea .scrubBase .scrubTop {
+    background-color: aqua;
+    width: 0%;
+    height: 6px;
+    border-radius: 3px;
+}
+
+.botNav {
+    position: -webkit-sticky;
+    position: sticky;
     bottom: 0;
-    left: 0;
     width: 100%;
     padding: 10px 0;
     display: flex;
