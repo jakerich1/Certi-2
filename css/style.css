@@ -67,8 +67,15 @@ body {
 }
 
 .controlArea {
+    position: absolute;
+    padding-right: 10px;
+    bottom: 4.5px;
+    left: -0.5px;
+    right: -0.5px;
     display: flex;
-    margin-bottom: 50px;
+    background: rgb(0, 0, 0, 0.75);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .controlArea .buttonGroup {

@@ -42,6 +42,32 @@
 
     <div class="coverArea draggable">
         <img src="./assets/images/covers/ayshani.jpg" alt="cover image">
+        <div class="controlArea">
+            <div class="buttonGroup">
+                <button id="play">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M7 4v16l13 -8z"></path>
+                    </svg>
+                </button>
+                <button id="pause">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-pause" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <rect x="6" y="5" width="4" height="14" rx="1"></rect>
+                        <rect x="14" y="5" width="4" height="14" rx="1"></rect>
+                    </svg>
+                </button>
+            </div>
+            <div class="scrubArea">
+                <div class="scrubBase">
+                    <div class="scrubTop"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <audio style="display: none;" id="myAudio">
@@ -49,32 +75,7 @@
         Your browser does not support the audio element.
     </audio>
 
-    <div class="controlArea">
-        <div class="buttonGroup">
-            <button id="play">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24"
-                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M7 4v16l13 -8z"></path>
-                </svg>
-            </button>
-            <button id="pause">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-pause" width="24" height="24"
-                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <rect x="6" y="5" width="4" height="14" rx="1"></rect>
-                    <rect x="14" y="5" width="4" height="14" rx="1"></rect>
-                </svg>
-            </button>
-        </div>
-        <div class="scrubArea">
-            <div class="scrubBase">
-                <div class="scrubTop"></div>
-            </div>
-        </div>
-    </div>
+    
 
     
 
