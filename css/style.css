@@ -18,19 +18,18 @@ body {
 }
 
 body {
+    position: relative;
     background-color: rgb(17, 17, 17);
     padding: 0 10px;
 }
 
 .title {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .topNav {
-    position: relative;
     display: flex;
     justify-content: space-around;
 
