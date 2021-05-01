@@ -23,12 +23,14 @@ body {
 }
 
 .title {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .topNav {
+    position: relative;
     display: flex;
     justify-content: space-around;
 
@@ -51,7 +53,8 @@ body {
 }
 
 .coverArea {
-    z-index: 1;
+    position: relative;
+    z-index: 1000;
     width: 100%;
     border-radius: 5px;
     -ms-touch-action: none;
@@ -61,11 +64,12 @@ body {
 .coverArea img {
     width: 100%;
     border-radius: 5px;
-    filter: opacity(0.1);
+    filter: opacity(1);
 }
 
 .controlArea {
     display: flex;
+    margin-bottom: 50px;
 }
 
 .controlArea .buttonGroup {
@@ -105,8 +109,8 @@ body {
 }
 
 .botNav {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
     padding: 10px 0;
